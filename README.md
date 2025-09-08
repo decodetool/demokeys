@@ -1,14 +1,13 @@
 # Demo Keys (macOS only)
 A simple solution for automatically typing sequences of text, when scripting product demos.
 
-## Demo
-I provide a list of blocks of text to type, then I cycle through them triggering them by pressing command+shift+p. 
+### See it in action
 
-**Note**: Ignore the incorrect shortcut displayed here. It's a screenstudios bug.
+I provide a list of blocks of text to type, then I cycle through them triggering their playback, by pressing command+shift+p. 
 
 <img width="50%" src="demo.gif"/>
 
-# Setups
+### Setup
 
  1. Install Hammerstone
  2. Give Hammerstone accessbility permissions
