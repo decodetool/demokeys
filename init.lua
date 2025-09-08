@@ -1,7 +1,15 @@
 local steps = {
     "npm run dev",
     "open http://localhost:3000",
-    "git commit -m \"demo\" && git push"
+    "git commit -m \"demo\" && git push",
+    "line 1\nline 2\nline 3",
+    [[
+This is a multiline string.
+It can contain "quotes", 'single quotes',
+and spans across multiple lines.
+
+Line breaks are preserved exactly.
+]]
   }
   
   local i = 1
@@ -25,14 +33,23 @@ local steps = {
     local pos = 1
     local function typeNext()
       if pos <= #text then
-        hs.eventtap.keyStrokes(text:sub(pos,pos))
+        local ch = text:sub(pos, pos)
+  
+        if ch == "\n" then
+          -- Send a Return key instead of trying to "type" the newline
+          hs.eventtap.keyStroke({}, "return")
+        else
+          hs.eventtap.keyStrokes(ch)
+        end
+  
         pos = pos + 1
-        local jitter = speed*0.5 + math.random() * speed -- 30–80ms
+        local jitter = speed * 0.5 + math.random() * speed  -- adds variation
         hs.timer.doAfter(jitter, typeNext)
       end
     end
     typeNext()
   end
+  
   
   
   hs.hotkey.bind({"shift", "cmd"}, "P", function()
@@ -49,4 +66,9 @@ local steps = {
   end)
   
 
+  
+  
+  hs.hotkey.bind({"shift", "alt"}, "P", function()
+    i = 1
+  end)
   
