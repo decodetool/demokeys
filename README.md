@@ -3,9 +3,10 @@ A simple solution for automatically typing sequences of text, when scripting pro
 
 ## Demo
 I provide a list of blocks of text to type, then I cycle through them triggering them by pressing command+shift+p. 
-<img width="50%" src="demo.gif"/>
 
-**Note**: This doesn't have a great workflow for saving/editing multiple demo plans, for now you'll just have to modify the `~/.hammerspoon/init.lua` file with new keyboard sequences
+**Note**: Ignore the incorrect shortcut displayed here. It's a screenstudios bug.
+
+<img width="50%" src="demo.gif"/>
 
 # Setups
 
@@ -26,3 +27,4 @@ I provide a list of blocks of text to type, then I cycle through them triggering
     1. To trigger the next block, press command+shift+p again.
  1. Run Reload Config to restart the demo (TODO: Maybe make a reset global keyboard shortcut)
 
+This doesn't have a great workflow for saving/editing multiple demo plans, for now you'll just have to modify the `~/.hammerspoon/init.lua` file with new keyboard sequences.
