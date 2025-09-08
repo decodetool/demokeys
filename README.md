@@ -1,6 +1,8 @@
 # Demo Keys (macOS only)
-A simple solution for simulating the typing you want to do when scripting product demos.
+A simple solution for automatically typing sequences of text, when scripting product demos.
 
+## Demo
+I provide a list of blocks of text to type, then I cycle through them triggering them by pressing command+shift+p. 
 <img width="50%" src="demo.gif"/>
 
 **Note**: This doesn't have a great workflow for saving/editing multiple demo plans, for now you'll just have to modify the `~/.hammerspoon/init.lua` file with new keyboard sequences
